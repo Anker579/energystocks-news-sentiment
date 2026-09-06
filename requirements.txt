@@ -1,0 +1,4 @@
+trafilatura
+pandas
+requests
+python-dotenv
