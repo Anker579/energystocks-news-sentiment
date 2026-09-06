@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 
 class NewsAPIConnector:
 
+    #load env variables
     def __init__(self):
 
         load_dotenv()
@@ -19,6 +20,7 @@ class NewsAPIConnector:
 
         self.timeout = 15
 
+    #generic request function to be used for API's
     def _request(self, url, params, max_retries=3):
 
         for attempt in range(max_retries):
@@ -82,6 +84,7 @@ class NewsAPIConnector:
             "API request failed after retries."
         )
 
+    #loads specified parameters into the correct format for newsdataio
     def get_newsdataio(
         self,
         query=None,
@@ -147,11 +150,12 @@ class NewsAPIConnector:
 
         return pd.DataFrame(articles)
 
+        #loads specified parameters into the correct format for marketaux
     def get_marketaux(
         self,
         symbols,
         language="en",
-        limit=20
+        limit=50
     ):
 
         if self.marketaux_api_key is None:
