@@ -1,7 +1,20 @@
 {
-    "SMR": "NuScale Power",
-    "CEG": "Constellation Energy",
     "CCJ": "Cameco",
+    "UEC": "Uranium Energy Corp",
+    "UUUU": "Energy Fuels",
+    "DNN": "Denison Mines",
+    "NXE": "NexGen Energy",
+    "URG": "Ur-Energy",
+    "UROY": "Uranium Royalty Corp",
+    "EU": "enCore Energy",
+    "LEU": "Centrus Energy",
+    "LTBR": "Lightbridge",
+    "SMR": "NuScale Power",
     "OKLO": "Oklo",
-    "LEU": "Centrus Energy"
+    "NNE": "NANO Nuclear Energy",
+    "ASPI": "ASP Isotopes",
+    "CEG": "Constellation Energy",
+    "TLN": "Talen Energy",
+    "VST": "Vistra",
+    "BWXT": "BWX Technologies"
 }

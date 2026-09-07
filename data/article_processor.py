@@ -1,13 +1,14 @@
 import json
 import time
+import config
 
 from data.backend_client import add_article, add_analysis, check_article
 from data.fulltext_retriever import get_fulltext
 from llm_communicator.sentiment_analyser import analyse_sentiment
 
 
-MODEL = "Qwen/Qwen3-4B-GGUF:Q4_K_M"
-PROMPT_VERSION = "v1"
+MODEL = config.MODEL
+PROMPT_VERSION = config.PROMPT_VERSION
 
 
 def process_articles(data, source_api):

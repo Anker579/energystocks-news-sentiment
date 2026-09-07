@@ -2,9 +2,6 @@ from data.data_connector import NewsAPIConnector
 from data.article_processor import process_articles
 import json
 
-MODEL="Qwen/Qwen3-4B-GGUF:Q4_K_M"
-PROMPT_VERSION="v1"
-
 connector = NewsAPIConnector()
 
 with open("llm_communicator/llm_inputs/monitored_stocks.json", "r") as f:
@@ -22,5 +19,5 @@ IO_data = connector.get_newsdataio(
         query="nuclear energy"
     )[["title", "publisher", "url", "image_url",]]
  
-#process_articles(m_data, "marketaux")
-#process_articles(IO_data, "newsdataio")
+process_articles(m_data, "marketaux")
+process_articles(IO_data, "newsdataio")
