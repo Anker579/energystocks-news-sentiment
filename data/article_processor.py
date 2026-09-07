@@ -11,7 +11,7 @@ MODEL = config.MODEL
 PROMPT_VERSION = config.PROMPT_VERSION
 
 
-def process_articles(data, source_api):
+def process_articles(data, source_api, MONITORED_STOCKS):
 
     for i in range(len(data)):
 
@@ -56,7 +56,8 @@ def process_articles(data, source_api):
 
             analysed_article = analyse_sentiment(
                 article=page_ft,
-                title=title
+                title=title,
+                monitored_stocks=MONITORED_STOCKS,
             )
 
             analysed_article = json.loads(analysed_article)
