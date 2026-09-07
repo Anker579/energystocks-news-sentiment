@@ -155,7 +155,7 @@ class NewsAPIConnector:
         self,
         symbols,
         language="en",
-        limit=50
+        limit=5
     ):
 
         if self.marketaux_api_key is None:
