@@ -1,9 +1,6 @@
+#This file communicates with my webapp hosted on pythonanywhere, where it can access a MySQL Database.
 import os
 import requests
-from dotenv import load_dotenv
-
-
-load_dotenv()
 
 BASE_URL = "https://angush579.pythonanywhere.com/api"
 API_KEY = os.getenv("ENERGY_API_KEY")
@@ -15,6 +12,7 @@ def check_article(url: str) -> dict:
         f"{BASE_URL}/articles/check",
         params={"url": url}
     )
+    response.raise_for_status()
 
     return response.json()
 
@@ -40,6 +38,7 @@ def add_article(
             "published_at": published_at
         }
     )
+    response.raise_for_status()
 
     return response.json()
 
@@ -64,5 +63,6 @@ def add_analysis(
             "stocks": analysis["stocks"]
         }
     )
+    response.raise_for_status()
 
     return response.json()
