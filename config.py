@@ -1,0 +1,3 @@
+MODEL="Qwen/Qwen3-4B-GGUF:Q4_K_M"
+
+PROMPT_VERSION="v1"

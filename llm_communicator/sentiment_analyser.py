@@ -6,11 +6,7 @@ from pathlib import Path
 INPUT_DIR = Path(__file__).parent / "llm_inputs"
 
 
-def analyse_sentiment(article: str, title: str) -> str:
-
-    with open(INPUT_DIR / "monitored_stocks.json", "r") as f:
-        monitored_stocks = json.load(f)
-
+def analyse_sentiment(article: str, title: str, monitored_stocks: dict) -> str:
     allowed_stocks = json.dumps(monitored_stocks)
 
     with open(INPUT_DIR / "system_input.txt", "r") as f:

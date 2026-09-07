@@ -1,6 +1,9 @@
 #This file communicates with my webapp hosted on pythonanywhere, where it can access a MySQL Database.
 import os
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
 
 BASE_URL = "https://angush579.pythonanywhere.com/api"
 API_KEY = os.getenv("ENERGY_API_KEY")
