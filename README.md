@@ -5,7 +5,7 @@ A Python-based project using a locally hosted Large Language Model (LLM) to anal
 The aim is to develop a system for tracking news sentiment over time and investigating its relationship with stock price movements.
 
 ## Features
-- Financial news retrieval using Marketaux and NewsData.io APIs, with additional GDELT integration
+- Financial news retrieval using Marketaux and NewsData.io APIs.
 - Configurable list of 18 monitored nuclear and energy-related stocks
 - Full-text article extraction using Trafilatura
 - Local LLM inference using a GGUF model served through llama.cpp
@@ -51,7 +51,7 @@ NEWSDATAIO_API_TOKEN=...
 ENERGY_API_KEY=...
 ```
 
-A locally hosted LLM is also required. The application currently communicates with a llama.cpp server through an OpenAI-compatible API at `http://localhost:8080/v1/chat/completions`.
+A locally hosted LLM is also required. The application currently communicates with a llama.cpp server through an OpenAI-compatible API at `http://localhost:8080/v1/chat/completions`. The specific parameters for which model to use and some other details can be altered in config.py.
 
 ### Use
 
@@ -67,4 +67,4 @@ With the local LLM server and Flask backend running, the application is designed
 
 ## Development
 
-This app is still a work in progress. I plan to extend it to include aggregation of sentiment over time, visualising results through a dashboard, and comparing changes in news sentiment with stock price performance.
+This app is still a work in progress. I plan to extend it to include aggregation of sentiment over time, visualising results through a dashboard, using the gdelt database to track past articles and allow back-testing, and comparing changes in news sentiment with stock price performance.
